@@ -18,7 +18,11 @@ The game stores your selected character and current progress in the browser with
 
 The game has no package dependencies or build step.
 
-1. Download or clone this repository.
+1. Clone this repository.
+```bash
+git clone https://github.com/tintunaung124/Gas-Cash-Chaos
+```
+
 2. Open the `Gas-Cash-Chaos` folder.
 3. Open `index.html` in a modern web browser.
 
@@ -34,6 +38,9 @@ You can also serve the project with a local web server. For example, if you have
 6. Press `Esc` to pause or resume the game.
 
 Reach the destination before fuel, money, stamina, or morale reaches zero. The trip also ends if tension reaches 100.
+
+Play the live version of the game at [Gas, Cash & Chaos on GitHub Pages](https://tintunaung124.github.io/Gas-Cash-Chaos/).
+
 
 ## Project structure
 
@@ -53,9 +60,3 @@ Gas-Cash-Chaos/
 `-- js/                 # Game logic and browser storage
 ```
 
-## Built with
-
-- HTML5
-- CSS3
-- JavaScript
-- Web Storage API
