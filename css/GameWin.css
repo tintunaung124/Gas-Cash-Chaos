@@ -97,3 +97,25 @@ body {
 
     z-index: 3;
 }
+
+@media (max-width: 700px) {
+    .Container {
+        top: 12px;
+        left: 8px;
+        width: calc(100% - 16px);
+        height: calc(100svh - 24px);
+        margin: 0;
+        padding: 48px 28px;
+    }
+
+    .Container h1 { font-size: 30px; margin: 0; }
+    .Container hr { width: 90%; margin: 12px auto; }
+    .Container .GameWinImage { width: 100%; left: 0; top: 0; }
+    .MainMenuButton {
+        left: 50%;
+        top: auto;
+        bottom: 6%;
+        min-height: 52px;
+        transform: translateX(-50%);
+    }
+}

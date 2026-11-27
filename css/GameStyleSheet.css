@@ -451,3 +451,153 @@ body:has(.PauseMenu.active)::before {
 #PauseToHomeButton:active {
     transform: translateY(1px);
 }
+
+.MobileControls {
+    display: none;
+}
+
+@media (max-width: 700px), (pointer: coarse) {
+    .Background {
+        height: 100svh;
+    }
+
+    .GameUI {
+        top: 4px;
+        left: 4px;
+        transform: scale(0.72);
+        transform-origin: top left;
+    }
+
+    .destination {
+        position: fixed;
+        top: 12px;
+        right: 8px;
+        left: auto;
+        width: 176px;
+        height: 48px;
+        transform: none;
+    }
+
+    .destination img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .destination progress {
+        top: 10px;
+        left: 36px;
+        width: 136px;
+        height: 24px;
+    }
+
+    .destination span {
+        top: 13px;
+        left: 84px;
+        font-size: 14px;
+    }
+
+    .Day {
+        position: fixed;
+        top: 60px;
+        right: 8px;
+        left: auto;
+        width: auto;
+        height: 28px;
+        padding: 4px 8px;
+        white-space: nowrap;
+        font-size: 16px;
+    }
+
+    .Instruction {
+        top: calc(100svh - 138px);
+        left: 16px;
+        font-size: 16px;
+    }
+
+    .Instruction span {
+        font-size: 0;
+    }
+
+    .Instruction span * {
+        font-size: 0;
+    }
+
+    .Instruction span::after {
+        content: "Press and hold Drive";
+        font-size: 16px;
+    }
+
+    .Car {
+        left: 32%;
+        bottom: 84px;
+        width: min(66vw, 320px);
+    }
+
+    .CarWheel {
+        left: 24.5%;
+        bottom: 92px;
+        width: min(16.5vw, 80px);
+    }
+
+    #EventIcon {
+        top: auto;
+        right: 16px;
+        bottom: 104px;
+        left: auto;
+        width: 112px;
+        height: 112px;
+    }
+
+    .MobileControls {
+        position: fixed;
+        right: 16px;
+        bottom: max(16px, env(safe-area-inset-bottom));
+        left: 16px;
+        z-index: 8;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        pointer-events: none;
+    }
+
+    .MobileControls button {
+        min-height: 52px;
+        padding: 0 20px;
+        border: 3px solid #2b1d1d;
+        border-radius: 12px;
+        font: bold 17px cursive, Arial, sans-serif;
+        color: #111;
+        background: #f6d94a;
+        box-shadow: 0 4px 0 #8f6b24;
+        touch-action: none;
+        pointer-events: auto;
+        user-select: none;
+    }
+
+    #MobileDriveButton {
+        min-width: 156px;
+        min-height: 64px;
+        background: #ee6bb3;
+    }
+
+    .MobileControls button:active {
+        transform: translateY(3px);
+        box-shadow: 0 1px 0 #8f6b24;
+    }
+
+    .PauseMenu {
+        width: calc(100% - 24px);
+        height: auto;
+        min-height: 72svh;
+        top: 50%;
+        padding: 56px 28px;
+        transform: translate(-50%, -50%);
+        gap: 12px;
+    }
+
+    #PauseText { font-size: 32px; }
+    .PauseHR { width: 80%; border-width: 2px; }
+    #PauseCG { width: 85%; height: auto; max-height: 32svh; object-fit: contain; }
+    .PauseButtons { width: 100%; flex-direction: column; gap: 8px; }
+    #ResumeButton, #PauseToHomeButton { width: 100%; min-height: 48px; }
+}

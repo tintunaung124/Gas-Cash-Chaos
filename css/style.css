@@ -337,3 +337,60 @@ body{
 .info-btn:hover{
     transform: scale(1.05);
 }
+
+@media (max-width: 700px) {
+    body {
+        min-height: 100svh;
+        background-position: 58% center;
+    }
+
+    .sky {
+        height: 48svh;
+    }
+
+    .logo {
+        top: 8%;
+        left: 50%;
+        width: min(88vw, 420px);
+        min-width: 0;
+        transform: translateX(-50%);
+    }
+
+    .cloud {
+        transform-origin: left center;
+    }
+
+    .car {
+        position: absolute;
+        right: -10vw;
+        bottom: 5svh;
+        left: auto;
+        top: auto;
+        width: min(92vw, 520px);
+        transform: none;
+    }
+
+    .play-btn,
+    .gallery-btn,
+    .avatar-btn,
+    .info-btn {
+        left: 20px;
+        width: min(42vw, 168px);
+        height: 52px;
+        border-width: 3px;
+        font-size: 21px;
+    }
+
+    .play-btn { top: 46svh; }
+    .gallery-btn { top: calc(46svh + 60px); }
+    .avatar-btn { top: calc(46svh + 120px); }
+    .info-btn { top: calc(46svh + 180px); }
+}
+
+@media (max-height: 620px) and (max-width: 700px) {
+    .sky { height: 42svh; }
+    .play-btn { top: 40svh; }
+    .gallery-btn { top: calc(40svh + 56px); }
+    .avatar-btn { top: calc(40svh + 112px); }
+    .info-btn { top: calc(40svh + 168px); }
+}

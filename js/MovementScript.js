@@ -8,6 +8,8 @@ const eventIcon = document.querySelector('#EventIcon');
 const pauseMenu = document.querySelector(".PauseMenu");
 const resumeButton = document.getElementById("ResumeButton");
 const pauseToHomeButton = document.getElementById("PauseToHomeButton");
+const mobileDriveButton = document.getElementById("MobileDriveButton");
+const mobilePauseButton = document.getElementById("MobilePauseButton");
 
 let inertiaTimer;
 let eventTimer;
@@ -134,3 +136,19 @@ resumeButton.addEventListener('click', function(){
 pauseToHomeButton.addEventListener('click', function(){
     window.location.href = "index.html";
 });
+
+if (mobileDriveButton) {
+    mobileDriveButton.addEventListener('pointerdown', function(event){
+        event.preventDefault();
+        mobileDriveButton.setPointerCapture(event.pointerId);
+        startMovement();
+    });
+
+    ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function(eventName){
+        mobileDriveButton.addEventListener(eventName, stopMovement);
+    });
+}
+
+if (mobilePauseButton) {
+    mobilePauseButton.addEventListener('click', triggerPause);
+}

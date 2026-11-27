@@ -79,3 +79,46 @@ body{
     border-color: yellow;
     color:  yellow;
 }
+
+@media (max-width: 700px) {
+    .Background {
+        height: 100svh;
+        background-position: center top;
+    }
+
+    .TextBox {
+        height: auto;
+        min-height: 38svh;
+        padding: 40px 20px 20px;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .Speaker {
+        position: absolute;
+        top: -24px;
+        left: 16px;
+        right: auto;
+        bottom: auto;
+        width: 112px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 1.15rem;
+    }
+
+    .Text {
+        width: 100%;
+        height: auto;
+        min-height: 112px;
+        font-size: clamp(1rem, 4.5vw, 1.25rem);
+        line-height: 1.4;
+    }
+
+    .NextButton {
+        position: static;
+        width: 144px;
+        min-height: 48px;
+        align-self: flex-end;
+        font-size: 1rem;
+    }
+}
